@@ -1,0 +1,9 @@
+<ion-list class="form__container" color="none">
+  <app-input-form *ngFor="let item of inputs"
+    [mascara]="item.mascara"
+    [titulo]="item.titulo"
+    [placeholderValue]="item.placeholderValue"
+    [temMascara]="item.temMascara"
+    (dadosInput)="criarJson($event)"
+  ></app-input-form>
+</ion-list>

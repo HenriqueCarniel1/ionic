@@ -1,0 +1,16 @@
+<app-back-button 
+  title="Lista de Cursos" 
+  [route]="'/add-curso'" 
+  slotButton="end" 
+  iconName="hardware-chip-sharp"
+  ></app-back-button> 
+
+<ion-content>
+  <app-lista-de-cursos 
+    [lista]="$listaDeCursos | async"
+    [keys]="keyCursos"
+    title="Cursos"
+    (clicked)="goToDetailPage($event)"
+  ></app-lista-de-cursos>
+
+</ion-content>

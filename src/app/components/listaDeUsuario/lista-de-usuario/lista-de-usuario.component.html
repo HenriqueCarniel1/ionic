@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+<ion-list class="list-user-style">
+  <div>
+    <ion-item *ngFor="let item of listaDeUsuarios | async; let index" [style.margin-bottom]=" 10 + 'px' ">
+      <ion-avatar slot="start">
+        <ion-img [src]="item.avatarImg"></ion-img>
+      </ion-avatar>
+      <div> 
+        <ion-label [style.font-size]=" 20 + 'px' ">{{item.name}}</ion-label>
+        <p class="email">{{item.email}}</p>
+        <p class="date">{{item.dataDeNascimento}}</p>
+      </div>
+      <ion-icon name="pencil-outline" (click)="goToEditUserPage(item.id)" slot="end" color="danger"></ion-icon>
+      <ion-icon name="trash" (click)="apagarUsuario(item.id)" slot="end" color="danger"></ion-icon>
+    </ion-item>
+  </div>
+</ion-list>

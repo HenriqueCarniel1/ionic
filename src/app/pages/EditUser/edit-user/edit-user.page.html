@@ -1,0 +1,18 @@
+<app-back-button title="Editar usuário" [route]=""></app-back-button> 
+
+<ion-content padding>
+  <app-photo-container></app-photo-container>
+
+  <app-form 
+    [inputs]="formulario" 
+    (enviarParaPai)="receberValoresDoFormulario($event)"
+  ></app-form>
+  
+  <app-button-center 
+    (clicked)="atualizarUsuario()" 
+    [espacoTop]="15" 
+    text="Editar"
+    iconName="create-outline"
+  ></app-button-center>
+
+</ion-content>

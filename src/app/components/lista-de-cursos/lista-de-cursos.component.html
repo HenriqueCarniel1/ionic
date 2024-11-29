@@ -1,0 +1,13 @@
+<h1>{{ title }}</h1>
+<ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let item of lista">
+      <app-card-curso 
+        [imagem]="item[keys[0]]" 
+        [subtitleCard]="item[keys[1]]" 
+        [title]="item[keys[2]]"
+        (click)="emitirEvento(item[keys[3]])" 
+      ></app-card-curso>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,22 @@
+<app-back-button title="Detalhes"></app-back-button>
+
+<ion-content class="center">
+  <div class="img-container">
+    <img [src]="txtImg">
+    <div>
+      <ion-label>{{txtNome}}</ion-label>
+      <p>R$ {{txtPreco}}</p>
+    </div>
+  </div>
+
+  <div class="btn-add-container">
+    <ion-button (click)="openModalAddUserPrompt()"><ion-icon name="add"></ion-icon> Adicionar</ion-button>
+  </div>
+
+  <div [style.margin-top]=" 80 + 'px' ">
+    <app-lista-de-usuario 
+      [listaDeUsuarios]="pesquisarUsuarios()"
+      title="Usuários que fazem o curso"
+      ></app-lista-de-usuario>
+  </div>
+</ion-content>
